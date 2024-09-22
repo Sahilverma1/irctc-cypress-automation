@@ -276,7 +276,7 @@ describe('IRCTC TATKAL BOOKING', () => {
 
               // MAKE SURE UPI ID EXIST THEN PROCEED PLEASE FILL UPI_ID VALUE IN cypress/fixtures/passenger_data.json as something like this "123713278162@paytm"
               if (UPI_ID && isValidUpiId) {
-                cy.get('#ptm-upi').click()
+                cy.get('#Pay using BHIM (Powered by PAYTM ) also accepts UPI').click()
                 cy.get('.brdr-box > :nth-child(2) > ._1WLd > :nth-child(1) > .xs-hover-box > ._Mzth > .form-ctrl').type(UPI_ID)
                 cy.get(':nth-child(5) > section > .btn').click()
                 // Waiting For 2 Mins for the user to pay In Case --no-exit option is emitted
